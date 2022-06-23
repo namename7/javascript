@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>나미의 일드 감상 저장소</title>
+     <script>
+      function LinksetColor(color){
+        var alist = document.querySelectorAll('a');
+        var i = 0 ;
+        while( i < alist.length){
+           alist[i].style.color = color;
+            i = i + 1 ;
+            }
+        }
+      function BodySetColor(color){
+      document.querySelector('body').style.color=color;
+      }
+      function BodySetBackgroundColor(color){
+      document.querySelector('body').style.background=color;
+      }
+      function nightdayhandler(self){
+      var target = document.querySelector('body');
+      if (self.value === 'night') {
+          Body.setBackgroundColor('black');
+          Body.setColor('white');
+          self.value = 'day';
+
+          Link.setColor('powderblue');
+
+      } else {
+              Body.setBackgroundColor('white');
+              Body.setColor('black');
+              self.value = 'night';
+
+              Link.setColor('blue');
+           }
+       }
+   </script>
+  </head>
+  <body>
+    <input  id="night_day" type="button"  value="night" onclick="
+       nightdayhandler(this);
+    ">
+
+
+    <h1>나미의 일드 저장소</h1>
+    <p>안녕하세요 저는 프론트 엔드를 꿈꾸는 꿈나무입니다. 제가 처음으로 만들어 볼 웹페이지는 일드 저장소입니다. 왜냐하면 저는 먹방,여행,추리 일드를 보는 취미가 있거든요.
+        처음 만드는 사이트인데 어떤걸 하지 고민하다가 제가 관심있는 취미를 이용한 사이트를 만드는게 좋을것 같아 이렇게 만들게 되었어요.  제가 여태 본 일드를 소개하고 추천하는
+        사이트로 제 나름대로 드라마에 대한 개인적인 후기 글도 있으니 즐겁게 즐겨 주셨으면 합니다.처음 만드는 사이트여서 많이 허접하겠지만 들려 주셔서 감사합니다.  </p>
+   <ol>
+    <a href="2-1.html" target="_brank" title="음식 일드"><h2><li>음식 일드</li></h2></a>
+
+    <a href="2-2.html" target="_brank"><h2><li>여행 일드</li></h2></a>
+
+    <a href="2-3.html" target="_brank"><h2><li>추리 일드</li></h2></a>
+
+    <a href="2-4.html" target="_brank"><h2><li>옛날 일드</li></h2></a>
+
+    <a href="2-5.html" target="_brank"><h2><li>음식과 여행 그 어딘가의 힐링 일드</li></h2></a>
+
+  </body>
+</html>
