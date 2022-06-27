@@ -4,20 +4,24 @@
     <meta charset="utf-8">
     <title>나미의 일드 감상 저장소</title>
      <script>
-      function LinksSetColor(color){
-        var alist = document.querySelectorAll('a');
-        var i = 0 ;
-        while( i < alist.length){
-           alist[i].style.color = color ;
-        i = i + 1 ;
-            }
-      }
-      function BodySetColor(color){
-        document.querySelector('body').style.color= color;
-      }
-      function BodySetBackgroundColor(color){
-        document.querySelector('body').style.background= color;
-      }
+     var Links = {
+       setColor:function(color){
+         var alist = document.querySelectorAll('a');
+         var i = 0 ;
+         while( i < alist.length){
+            alist[i].style.color = color ;
+         i = i + 1 ;
+             }
+       }
+     }
+      var Body = {
+        setColor:function(color){
+          document.querySelector('body').style.color= color;
+          },
+        setBackgroundColor:function(color){
+          document.querySelector('body').style.background= color;
+         }
+        }
 
       function nightdayhandler(self){
       var target = document.querySelector('body')
@@ -26,14 +30,14 @@
       Body.setColor('white');
       self.value = 'day';
 
-        Links.setColor('powderblue');
+      Links.setColor('powderblue');
 
       }  else {
       Body.setBackgroundColor('white');
       Body.setColor('black');
       self.value = 'night';
 
-      Link.setColor('blue');
+      Links.setColor('blue');
         }
       }
    </script>
@@ -63,13 +67,18 @@
      document.write("<br>");
      for(var key in coworkers){
        document.write(coworkers[key]+'<br>');
-     }
-     document.write("<br>");
-     for(var key in coworkers){
-       document.write(key+'<br>');
-     }
-    </script>
 
+      }
+      </script>
+      <h2>property & method</h2>
+      <script>
+      coworkers.showAll = function(){
+         for(var key in this){
+            document.write(key+":"+this[key]+'<br>');
+          }
+        }
+        coworkers.showAll();
+     </script>
     <h1>나미의 일드 저장소</h1>
     <p>안녕하세요 저는 프론트 엔드를 꿈꾸는 꿈나무입니다. 제가 처음으로 만들어 볼 웹페이지는 일드 저장소입니다. 왜냐하면 저는 먹방,여행,추리 일드를 보는 취미가 있거든요.
         처음 만드는 사이트인데 어떤걸 하지 고민하다가 제가 관심있는 취미를 이용한 사이트를 만드는게 좋을것 같아 이렇게 만들게 되었어요.  제가 여태 본 일드를 소개하고 추천하는
